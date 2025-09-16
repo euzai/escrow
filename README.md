@@ -24,6 +24,8 @@ graph TD
         Q --> R[Escrow State: Completed];
     end
 
+... or view here: https://claude.ai/public/artifacts/18d4b0d9-d432-4862-b6d3-3a2683965947
+
 
 Installation:
 
