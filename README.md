@@ -7,6 +7,7 @@ graph TD
         C --> D{Mint Tokens to Parties};
         D --> E[End Setup];
     end
+
     subgraph "Escrow Process"
         F[Buyer Approves Escrow for ERC-20] --> G[Buyer Calls createEscrow];
         G --> H[Buyer Calls depositFunds];
@@ -42,6 +43,4 @@ C:\escrow>npx hardhat test
 
 <img width="887" height="853" alt="image" src="https://github.com/user-attachments/assets/4e5da802-b65e-448c-ae6f-021bc988e7ad" />
 
-·············································································································
-|  Toolchain:  hardhat                                                                                      │
-·············································································································
+
