@@ -1,6 +1,7 @@
 Simple escrow contract. Flowchart - render in any Mermaid viewer:
 
 graph TD
+
     subgraph "Setup"
         A[Start] --> B{Deploy ERC-20 & ERC-721 Tokens};
         B --> C{Deploy Escrow Contract};
