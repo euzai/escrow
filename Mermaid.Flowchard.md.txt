@@ -1,0 +1,22 @@
+graph TD
+    subgraph "Setup"
+        A[Start] --> B{Deploy ERC-20 & ERC-721 Tokens};
+        B --> C{Deploy Escrow Contract};
+        C --> D{Mint Tokens to Parties};
+        D --> E[End Setup];
+    end
+
+    subgraph "Escrow Process"
+        F[Buyer Approves Escrow for ERC-20] --> G[Buyer Calls createEscrow];
+        G --> H[Buyer Calls depositFunds];
+        H --> I{ERC-20 Locked in Escrow};
+        I --> J[Escrow State: AwaitingDelivery];
+        J --> K[Seller Approves Escrow for ERC-721];
+        K --> L[Seller Calls deliverAsset];
+        L --> M{Seller Transfers NFT to Escrow};
+        M --> N{Escrow Contract Receives NFT};
+        N --> O[onERC721Received Callback Triggered];
+        O --> P[Escrow Transfers NFT to Buyer];
+        P --> Q[Escrow Transfers ERC-20 to Seller];
+        Q --> R[Escrow State: Completed];
+    end
