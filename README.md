@@ -1,14 +1,13 @@
-Simple escrow contract. Flowchart - render in any Mermaid viewer:
+##Simple escrow contract. 
 
-graph TD
-
+#Flowchart 
+    graph TD
     subgraph "Setup"
         A[Start] --> B{Deploy ERC-20 & ERC-721 Tokens};
         B --> C{Deploy Escrow Contract};
         C --> D{Mint Tokens to Parties};
         D --> E[End Setup];
     end
-
     subgraph "Escrow Process"
         F[Buyer Approves Escrow for ERC-20] --> G[Buyer Calls createEscrow];
         G --> H[Buyer Calls depositFunds];
@@ -23,8 +22,6 @@ graph TD
         P --> Q[Escrow Transfers ERC-20 to Seller];
         Q --> R[Escrow State: Completed];
     end
-
-... or view here: https://claude.ai/public/artifacts/18d4b0d9-d432-4862-b6d3-3a2683965947
 
 
 Installation:
