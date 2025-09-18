@@ -1,6 +1,13 @@
-##Simple escrow contract. 
 
-#Flowchart 
+# Escrow Advanced (on-chain)
+
+This repository contains a simple ERC-721 / ERC-20 escrow smart contract for on-chain settlement
+
+- Contract uses **OpenZeppelin Contracts v5.x** imports. See OZ docs.  
+- Hardhat project with tests.
+ 
+# Flowchart
+
     graph TD
     subgraph "Setup"
         A[Start] --> B{Deploy ERC-20 & ERC-721 Tokens};
@@ -24,7 +31,7 @@
     end
 
 
-Installation:
+# Installation
 
 
 1. npm init -y
